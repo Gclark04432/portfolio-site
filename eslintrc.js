@@ -2,10 +2,7 @@
 module.exports = {
   root: true,
   extends: ['next/core-web-vitals'],
-  plugins: ['@typescript-eslint', 'tailwindcss', 'prettier'],
-  rules: {
-    'tailwindcss/classnames-order': 'off',
-  },
+  plugins: ['@typescript-eslint', 'prettier'],
   parser: '@typescript-eslint/parser',
   overrides: [
     {
@@ -20,12 +17,8 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/explicit-function-return-type',
         'plugin:@typescript-eslint/no-deprecated',
-        'plugin:tailwindcss/recommended',
         'prettier',
       ],
-      rules: {
-        'tailwindcss/classnames-order': 'off',
-      },
     },
   ],
 };
