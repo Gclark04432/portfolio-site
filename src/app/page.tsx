@@ -1,12 +1,9 @@
-export default function Home() {
+import { Home } from './home';
+
+export default function Page() {
   return (
     <div className='h-screen w-screen snap-y snap-mandatory overflow-y-scroll'>
-      <section
-        id='home'
-        className='flex h-screen w-screen snap-start items-center justify-center bg-amber-400'
-      >
-        Home
-      </section>
+      <Home />
       <section
         id='about'
         className='flex h-screen w-screen snap-start items-center justify-center bg-cyan-400'

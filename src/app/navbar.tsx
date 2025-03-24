@@ -42,7 +42,7 @@ export const NavBar = () => {
               <img
                 alt='Gary Clark'
                 src='/profile.png'
-                className='h-auto w-8 rounded-full'
+                className='size-8 h-auto rounded-full'
               />
             </div>
             <div className='hidden sm:ml-6 sm:block'>
