@@ -2,7 +2,7 @@
 
 export const Home = () => {
   return (
-    <div
+    <section
       id='home'
       className='flex h-screen w-screen snap-start items-center justify-center'
     >
@@ -26,6 +26,6 @@ export const Home = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };

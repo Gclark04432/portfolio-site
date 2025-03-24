@@ -1,15 +1,11 @@
 import { Home } from './home';
+import { About } from './about';
 
 export default function Page() {
   return (
     <div className='h-screen w-screen snap-y snap-mandatory overflow-y-scroll'>
       <Home />
-      <section
-        id='about'
-        className='flex h-screen w-screen snap-start items-center justify-center bg-cyan-400'
-      >
-        About Me
-      </section>
+      <About />
       <section
         id='projects'
         className='flex h-screen w-screen snap-start items-center justify-center bg-fuchsia-400'
