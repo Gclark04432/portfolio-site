@@ -1,11 +1,88 @@
 'use client';
 
-const stackItems = [
-  { name: 'Javascript', img: '' },
-  { name: 'Typescript', img: '' },
-  { name: 'Next.js', img: '' },
-  { name: 'React', img: '' },
-  { name: 'NodeJs', img: '' },
+import { Proficiency, StackItem } from '@/types';
+
+const stackItems: StackItem[] = [
+  {
+    name: 'Javascript',
+    img: '',
+    proficiency: Proficiency.EXPERT,
+  },
+  {
+    name: 'Typescript',
+    img: '',
+    proficiency: Proficiency.EXPERT,
+  },
+  {
+    name: 'Next.js',
+    img: '',
+    proficiency: Proficiency.EXPERT,
+  },
+  {
+    name: 'React',
+    img: '',
+    proficiency: Proficiency.EXPERT,
+  },
+  {
+    name: 'NodeJs',
+    img: '',
+    proficiency: Proficiency.EXPERT,
+  },
+  {
+    name: 'HTML',
+    img: '',
+    proficiency: Proficiency.EXPERT,
+  },
+  {
+    name: 'CSS',
+    img: '',
+    proficiency: Proficiency.EXPERT,
+  },
+  {
+    name: 'TailwindCSS',
+    img: '',
+    proficiency: Proficiency.COMPETENT,
+  },
+  {
+    name: 'Java',
+    img: '',
+    proficiency: Proficiency.COMPETENT,
+  },
+  {
+    name: 'Python',
+    img: '',
+    proficiency: Proficiency.COMPETENT,
+  },
+  {
+    name: 'MySQL',
+    img: '',
+    proficiency: Proficiency.COMPETENT,
+  },
+  {
+    name: 'Docker',
+    img: '',
+    proficiency: Proficiency.COMPETENT,
+  },
+  {
+    name: 'Jenkins',
+    img: '',
+    proficiency: Proficiency.COMPETENT,
+  },
+  {
+    name: 'Buildkite',
+    img: '',
+    proficiency: Proficiency.COMPETENT,
+  },
+  {
+    name: 'AWS',
+    img: '',
+    proficiency: Proficiency.COMPETENT,
+  },
+  {
+    name: 'Git',
+    img: '',
+    proficiency: Proficiency.COMPETENT,
+  },
 ];
 
 export const About = () => {
@@ -36,8 +113,11 @@ export const About = () => {
           <div className='ml-20 flex w-full flex-wrap p-8'>
             {stackItems.map((item) => {
               return (
-                <div className='mt-2 mr-2 rounded bg-gray-900 p-1 text-gray-200'>
-                  {item.name}
+                <div
+                  key={item.name}
+                  className={`mt-2 mr-2 rounded bg-conic/[from_0deg] from-black p-0.5 text-gray-200 ${item.proficiency === Proficiency.EXPERT ? 'via-amber-400' : 'via-red-500'} to_black`}
+                >
+                  <div className='bg-gray-900'>{item.name}</div>
                 </div>
               );
             })}
