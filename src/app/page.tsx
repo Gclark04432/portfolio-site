@@ -1,5 +1,6 @@
 import { Home } from './home';
 import { About } from './about';
+import { ContactMe } from './contact';
 
 export default function Page() {
   return (
@@ -12,12 +13,7 @@ export default function Page() {
       >
         Projects
       </section>
-      <section
-        id='contact'
-        className='flex h-screen w-screen snap-start items-center justify-center bg-indigo-400'
-      >
-        Contact Me
-      </section>
+      <ContactMe />
     </div>
   );
 }

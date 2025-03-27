@@ -7,81 +7,97 @@ const stackItems: StackItem[] = [
     name: 'Javascript',
     img: '',
     proficiency: Proficiency.EXPERT,
+    border: 'bg-amber-500',
   },
   {
     name: 'Typescript',
     img: '',
     proficiency: Proficiency.EXPERT,
+    border: 'bg-amber-500',
   },
   {
     name: 'Next.js',
     img: '',
     proficiency: Proficiency.EXPERT,
+    border: 'bg-amber-500',
   },
   {
     name: 'React',
     img: '',
     proficiency: Proficiency.EXPERT,
+    border: 'bg-amber-500',
   },
   {
     name: 'NodeJs',
     img: '',
     proficiency: Proficiency.EXPERT,
+    border: 'bg-amber-500',
   },
   {
     name: 'HTML',
     img: '',
     proficiency: Proficiency.EXPERT,
+    border: 'bg-amber-500',
   },
   {
     name: 'CSS',
     img: '',
     proficiency: Proficiency.EXPERT,
+    border: 'bg-amber-500',
   },
   {
     name: 'TailwindCSS',
     img: '',
     proficiency: Proficiency.COMPETENT,
+    border: 'bg-red-500',
   },
   {
     name: 'Java',
     img: '',
     proficiency: Proficiency.COMPETENT,
+    border: 'bg-red-500',
   },
   {
     name: 'Python',
     img: '',
     proficiency: Proficiency.COMPETENT,
+    border: 'bg-blue-500',
   },
   {
     name: 'MySQL',
     img: '',
     proficiency: Proficiency.COMPETENT,
+    border: 'bg-red-500',
   },
   {
     name: 'Docker',
     img: '',
     proficiency: Proficiency.COMPETENT,
+    border: 'bg-red-500',
   },
   {
     name: 'Jenkins',
     img: '',
     proficiency: Proficiency.COMPETENT,
+    border: 'bg-red-500',
   },
   {
     name: 'Buildkite',
     img: '',
     proficiency: Proficiency.COMPETENT,
+    border: 'bg-blue-500',
   },
   {
     name: 'AWS',
     img: '',
     proficiency: Proficiency.COMPETENT,
+    border: 'bg-red-500',
   },
   {
     name: 'Git',
     img: '',
     proficiency: Proficiency.COMPETENT,
+    border: 'bg-amber-500',
   },
 ];
 
@@ -115,9 +131,9 @@ export const About = () => {
               return (
                 <div
                   key={item.name}
-                  className={`mt-2 mr-2 rounded bg-conic/[from_0deg] from-black p-0.5 text-gray-200 ${item.proficiency === Proficiency.EXPERT ? 'via-amber-400' : 'via-red-500'} to_black`}
+                  className={`mt-2 mr-2 rounded border border-amber-400 bg-slate-400 px-4 py-2`}
                 >
-                  <div className='bg-gray-900'>{item.name}</div>
+                  <div>{item.name}</div>
                 </div>
               );
             })}

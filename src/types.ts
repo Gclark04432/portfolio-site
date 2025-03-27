@@ -2,6 +2,7 @@ export interface StackItem {
   name: string;
   img: string;
   proficiency: Proficiency;
+  border: string;
 }
 
 export enum Proficiency {
