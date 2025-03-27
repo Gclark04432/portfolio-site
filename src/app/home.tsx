@@ -4,7 +4,7 @@ export const Home = () => {
   return (
     <section
       id='home'
-      className='flex h-screen w-screen snap-start items-center justify-center'
+      className='flex h-screen w-screen snap-none items-center justify-center md:snap-start'
     >
       <div className='flex h-screen w-4/6 flex-wrap items-center justify-start bg-gray-800 p-10'>
         <div>

@@ -11,3 +11,10 @@ export enum Proficiency {
   COMPETENT,
   BEGINNER,
 }
+
+export interface Project {
+  name: string;
+  technologies: StackItem[];
+  img: string;
+  description: string;
+}

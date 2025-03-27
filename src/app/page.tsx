@@ -1,18 +1,14 @@
 import { Home } from './home';
 import { About } from './about';
+import { Projects } from './projects';
 import { ContactMe } from './contact';
 
 export default function Page() {
   return (
-    <div className='h-screen w-screen snap-y snap-mandatory overflow-y-scroll'>
+    <div className='h-screen w-screen snap-none snap-y overflow-y-scroll md:snap-mandatory'>
       <Home />
       <About />
-      <section
-        id='projects'
-        className='flex h-screen w-screen snap-start items-center justify-center bg-fuchsia-400'
-      >
-        Projects
-      </section>
+      <Projects />
       <ContactMe />
     </div>
   );

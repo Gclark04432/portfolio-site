@@ -105,9 +105,9 @@ export const About = () => {
   return (
     <section
       id='about'
-      className='flex h-screen w-screen snap-start items-center justify-center bg-gray-800'
+      className='flex w-screen snap-none flex-wrap items-center justify-center bg-gray-800 md:h-screen md:snap-start'
     >
-      <div className='flex h-screen w-1/2 items-center justify-center'>
+      <div className='flex w-full items-center justify-center md:h-screen md:w-1/2'>
         <div className='text-l ml-20 p-8 font-normal text-gray-400'>
           Hey there! I'm Gary Clark, a software developer based in Oregon. I
           specialize in frontend development, particularly using Next.js, React,
@@ -121,7 +121,7 @@ export const About = () => {
           possibilities!
         </div>
       </div>
-      <div className='flex h-screen w-1/2 items-center justify-center'>
+      <div className='flex w-full items-center justify-center md:h-screen md:w-1/2'>
         <div className='flex flex-wrap'>
           <div className='ml-20 flex w-full p-8 text-3xl font-extrabold text-gray-400'>
             My Stack

@@ -4,7 +4,7 @@ export const ContactMe = () => {
   return (
     <section
       id='contact'
-      className='flex h-screen w-screen snap-start items-center justify-center bg-gray-800'
+      className='flex h-screen w-screen snap-none items-center justify-center bg-gray-800 md:snap-start'
     >
       <div className='max-w-l box-border flex flex-wrap items-center justify-center rounded-2xl p-10'>
         <div className='w-full min-w-[200px]'>
