@@ -1,6 +1,7 @@
 'use client';
 
 import { Proficiency, Project } from '@/types';
+import { JavascriptLogo } from '../../public/logos';
 
 const projects: Project[] = [
   {
@@ -11,18 +12,21 @@ const projects: Project[] = [
         img: '',
         proficiency: Proficiency.EXPERT,
         border: 'bg-amber-500',
+        logo: <JavascriptLogo />,
       },
       {
         name: 'Next.js',
         img: '',
         proficiency: Proficiency.EXPERT,
         border: 'bg-amber-500',
+        logo: <JavascriptLogo />,
       },
       {
         name: 'React',
         img: '',
         proficiency: Proficiency.EXPERT,
         border: 'bg-amber-500',
+        logo: <JavascriptLogo />,
       },
     ],
     img: '',
