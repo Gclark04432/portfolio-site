@@ -2,7 +2,6 @@ import { ReactElement } from 'react';
 
 export interface StackItem {
   name: string;
-  img: string;
   proficiency: Proficiency;
   border: string;
   logo: ReactElement;

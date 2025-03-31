@@ -1,6 +1,6 @@
 import { JavascriptLogo } from './Javascript';
 import { TypescriptLogo } from './Typescript';
-import { NextjsLogo } from './NextJS';
+import { NextjsLogo } from './Nextjs';
 import { ReactLogo } from './React';
 import { NodejsLogo } from './Nodejs';
 import { HTMLLogo } from './HTML';
@@ -12,6 +12,8 @@ import { MySQLLogo } from './MySQL';
 import { DockerLogo } from './Docker';
 import { JenkinsLogo } from './Jenkins';
 import { AWSLogo } from './AWSLogo';
+import { NestJSLogo } from './NestJS';
+import { ExpressLogo } from './Express';
 
 export {
   JavascriptLogo,
@@ -28,4 +30,6 @@ export {
   DockerLogo,
   JenkinsLogo,
   AWSLogo,
+  NestJSLogo,
+  ExpressLogo,
 };
