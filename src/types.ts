@@ -1,5 +1,11 @@
 import { ReactElement } from 'react';
 
+export interface NavItem {
+  name: string;
+  href: string;
+  current: boolean;
+}
+
 export interface StackItem {
   name: string;
   proficiency: Proficiency;
