@@ -9,7 +9,6 @@ export interface NavItem {
 export interface StackItem {
   name: string;
   proficiency: Proficiency;
-  border: string;
   logo: ReactElement;
 }
 

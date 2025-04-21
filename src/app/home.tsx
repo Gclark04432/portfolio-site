@@ -8,7 +8,7 @@ export const Home = () => {
     >
       <div className='flex h-screen w-4/6 flex-wrap items-center justify-start bg-stone-950 p-10'>
         <div>
-          <div className='w-full text-4xl font-extrabold text-white underline decoration-rose-700 decoration-1 underline-offset-5'>
+          <div className='animate-wiggle w-full text-4xl font-extrabold text-white underline decoration-rose-700 decoration-1 underline-offset-5'>
             Hi! I'm Gary.
           </div>
           <div className='w-full text-xl font-medium text-gray-400'>

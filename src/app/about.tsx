@@ -3,12 +3,28 @@
 import { frontendStackItems } from '@/data/stack/frontend';
 import { backendStackItems } from '@/data/stack/backend';
 import { toolStackItems } from '@/data/stack/tools';
+import { Proficiency, StackItem } from '@/types';
 
 export const About = () => {
+  const getBorderClass = (item: StackItem): string => {
+    switch (item.proficiency) {
+      case Proficiency.EXPERT:
+        return 'animate-rotate-border mt-2 mr-2 rounded bg-conic/[from_var(--border-angle)] from-black via-amber-300 to-black p-1';
+      case Proficiency.PROFICIENT:
+        return 'animate-rotate-border mt-2 mr-2 rounded bg-conic/[from_var(--border-angle)] from-black via-purple-300 to-black p-1';
+      case Proficiency.COMPETENT:
+        return 'animate-rotate-border mt-2 mr-2 rounded bg-conic/[from_var(--border-angle)] from-black via-blue-300 to-black p-1';
+      case Proficiency.BEGINNER:
+        return 'animate-rotate-border mt-2 mr-2 rounded bg-conic/[from_var(--border-angle)] from-black via-green-300 to-black p-1';
+      default:
+        return 'animate-rotate-border mt-2 mr-2 rounded bg-conic/[from_var(--border-angle)] from-black via-black to-black p-1';
+    }
+  };
+
   return (
     <section
       id='about'
-      className='flex w-screen snap-none flex-wrap items-center justify-center bg-white text-gray-800 md:h-screen md:snap-start'
+      className='flex w-screen snap-none flex-wrap items-center justify-center bg-stone-950 text-white md:h-screen md:snap-start'
     >
       <div className='flex w-full items-center justify-center'>
         <div className='text-l p-8 font-normal'>
@@ -31,11 +47,18 @@ export const About = () => {
             <div className='align- flex flex-wrap'>
               <div className='w-full text-end text-lg'>Key</div>
               <div className='flex w-full justify-end'>
-                <div className='mr-0.5 h-4 w-4 cursor-pointer rounded-full border-2 border-amber-500 bg-white hover:animate-bounce' />
-                <div className='mx-0.25 h-4 w-4 cursor-pointer rounded-full border-2 border-purple-500 bg-white hover:animate-bounce' />
-                <div className='mx-0.25 h-4 w-4 cursor-pointer rounded-full border-2 border-blue-500 bg-white hover:animate-bounce' />
-                <div className='mx-0.25 h-4 w-4 cursor-pointer rounded-full border-2 border-red-500 bg-white hover:animate-bounce' />
-                <div className='ml-0.25 h-4 w-4 cursor-pointer rounded-full border-2 border-green-500 bg-white hover:animate-bounce' />
+                <div className='animate-rotate-border mr-0.5 h-5 w-5 rounded-full bg-conic/[from_var(--border-angle)] from-black via-amber-300 to-black p-0.5'>
+                  <div className='h-4 w-4 cursor-pointer rounded-full bg-white' />
+                </div>
+                <div className='animate-rotate-border mr-0.5 h-5 w-5 rounded-full bg-conic/[from_var(--border-angle)] from-black via-purple-300 to-black p-0.5'>
+                  <div className='h-4 w-4 cursor-pointer rounded-full bg-white' />
+                </div>{' '}
+                <div className='animate-rotate-border mr-0.5 h-5 w-5 rounded-full bg-conic/[from_var(--border-angle)] from-black via-blue-300 to-black p-0.5'>
+                  <div className='h-4 w-4 cursor-pointer rounded-full bg-white' />
+                </div>{' '}
+                <div className='animate-rotate-border mr-0.5 h-5 w-5 rounded-full bg-conic/[from_var(--border-angle)] from-black via-green-300 to-black p-0.5'>
+                  <div className='h-4 w-4 cursor-pointer rounded-full bg-white' />
+                </div>
               </div>
             </div>
           </div>
@@ -46,12 +69,13 @@ export const About = () => {
           <div className='flex w-full flex-wrap px-8'>
             {frontendStackItems.map((item) => {
               return (
-                <div
-                  key={item.name}
-                  className={`mt-2 mr-2 flex rounded border ${item.border} bg-white px-2 py-1`}
-                >
-                  <div className='flex items-center'>{item.logo}</div>
-                  <div className='ml-1'>{item.name}</div>
+                <div key={item.name} className={`${getBorderClass(item)}`}>
+                  <div
+                    className={`flex rounded bg-white px-2 py-1 text-slate-950`}
+                  >
+                    <div className='flex items-center'>{item.logo}</div>
+                    <div className='ml-1'>{item.name}</div>
+                  </div>
                 </div>
               );
             })}
@@ -62,12 +86,13 @@ export const About = () => {
           <div className='flex w-full flex-wrap px-8'>
             {backendStackItems.map((item) => {
               return (
-                <div
-                  key={item.name}
-                  className={`mt-2 mr-2 flex rounded border ${item.border} bg-white px-2 py-1`}
-                >
-                  <div className='flex items-center'>{item.logo}</div>
-                  <div className='ml-1'>{item.name}</div>
+                <div key={item.name} className={`${getBorderClass(item)}`}>
+                  <div
+                    className={`flex rounded bg-white px-2 py-1 text-slate-950`}
+                  >
+                    <div className='flex items-center'>{item.logo}</div>
+                    <div className='ml-1'>{item.name}</div>
+                  </div>
                 </div>
               );
             })}
@@ -78,12 +103,13 @@ export const About = () => {
           <div className='flex w-full flex-wrap px-8'>
             {toolStackItems.map((item) => {
               return (
-                <div
-                  key={item.name}
-                  className={`mt-2 mr-2 flex rounded border ${item.border} bg-white px-2 py-1`}
-                >
-                  <div className='flex items-center'>{item.logo}</div>
-                  <div className='ml-1'>{item.name}</div>
+                <div key={item.name} className={`${getBorderClass(item)}`}>
+                  <div
+                    className={`flex rounded bg-white px-2 py-1 text-slate-950`}
+                  >
+                    <div className='flex items-center'>{item.logo}</div>
+                    <div className='ml-1'>{item.name}</div>
+                  </div>
                 </div>
               );
             })}

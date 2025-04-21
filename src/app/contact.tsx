@@ -27,11 +27,14 @@ export const ContactMe = () => {
             placeholder='Message...'
           />
         </div>
-        <div className='mt-4 flex w-full min-w-[200px] items-center justify-center'>
+        <a
+          className='mt-4 flex w-full min-w-[200px] items-center justify-center'
+          href='mailto:gclark04432@live.co.uk'
+        >
           <button className='cursor-pointer rounded border border-blue-700 bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700'>
             Submit
           </button>
-        </div>
+        </a>
       </div>
     </section>
   );
