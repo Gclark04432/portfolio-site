@@ -38,7 +38,7 @@ export const Projects = () => {
   return (
     <section
       id='projects'
-      className='flex h-screen w-screen snap-none flex-wrap items-center justify-center bg-gray-800 md:snap-start'
+      className='flex h-screen w-screen flex-wrap items-center justify-center bg-gray-800'
     >
       <div className='text-l w-full p-8 font-normal text-gray-400'>
         Projects...

@@ -24,7 +24,7 @@ export const About = () => {
   return (
     <section
       id='about'
-      className='flex w-screen snap-none flex-wrap items-center justify-center bg-stone-950 text-white md:h-screen md:snap-start'
+      className='flex w-screen flex-wrap items-center justify-center bg-stone-950 text-white md:h-screen'
     >
       <div className='flex w-full items-center justify-center'>
         <div className='text-l p-8 font-normal'>
