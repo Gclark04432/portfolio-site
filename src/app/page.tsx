@@ -5,7 +5,7 @@ import { ContactMe } from './contact';
 
 export default function Page() {
   return (
-    <div className='h-screen w-screen overflow-y-scroll'>
+    <div className='h-screen w-screen'>
       <Home />
       <About />
       <Projects />

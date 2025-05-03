@@ -7,22 +7,37 @@
 }
 
 @theme {
-  --animate-wiggle: wiggle 1s ease-in-out infinite;
-  @keyframes wiggle {
-    0%,
-    100% {
-      transform: rotate(-3deg);
-    }
-    50% {
-      transform: rotate(3deg);
-    }
-  }
-
   --animate-rotate-border: rotate-border 3s linear infinite;
 
   @keyframes rotate-border {
     to {
       --border-angle: 360deg;
+    }
+  }
+
+  --animate-box-slide: box-slide 10s linear infinite;
+  @keyframes box-slide {
+    0% {
+      margin-left: 0;
+    }
+    50% {
+      margin-left: 98%;
+      transform: scale(2);
+    }
+    100% {
+      margin-left: 0;
+      transform: scale(1);
+    }
+  }
+
+  --animate-pulse: pulse 2s linear infinite;
+  @keyframes pulse {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
     }
   }
 }

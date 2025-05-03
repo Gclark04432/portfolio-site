@@ -14,6 +14,7 @@ import { JenkinsLogo } from './Jenkins';
 import { AWSLogo } from './AWSLogo';
 import { NestJSLogo } from './NestJS';
 import { ExpressLogo } from './Express';
+import { NextjsWhiteLogo } from './NextjsWhite';
 
 export {
   JavascriptLogo,
@@ -32,4 +33,5 @@ export {
   AWSLogo,
   NestJSLogo,
   ExpressLogo,
+  NextjsWhiteLogo,
 };
