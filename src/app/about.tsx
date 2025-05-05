@@ -26,12 +26,18 @@ export const About = () => {
       id='about'
       className='flex w-screen flex-wrap items-center justify-center bg-stone-950 text-white md:h-screen'
     >
-      <div className='flex w-full items-center justify-center'>
-        <div className='text-l p-8 font-normal'>
-          Hey there! I'm Gary Clark, a software developer based in Oregon. I
-          specialize in frontend development, particularly using Next.js, React,
-          and Typescript, but I'm also comfortable with various tools and able
-          to adapt to project needs. I also have experience in full stack
+      <div className='w-full text-center text-2xl text-white underline decoration-rose-700 underline-offset-4'>
+        ABOUT
+      </div>
+      <div className='flex flex-wrap md:w-2xl lg:w-4xl'>
+        <div className='w-full p-4 text-center text-4xl font-bold md:w-1/2 md:text-end'>
+          Hey there! I'm Gary Clark, a software developer based in Oregon.
+        </div>
+        <div className='text-l w-full p-4 text-center font-normal md:w-1/2 md:text-start'>
+          {' '}
+          I specialize in frontend development, particularly using Next.js,
+          React, and Typescript, but I'm also comfortable with various tools and
+          able to adapt to project needs. I also have experience in full stack
           development. <br />
           <br />
           I'm looking for new opportunities where I can merge my love for code

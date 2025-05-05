@@ -20,7 +20,7 @@ export const Home = () => {
       id='home'
       className='flex h-screen w-screen flex-col justify-center bg-stone-950'
     >
-      <div className='flex w-full'>
+      <div className='flex self-center md:w-2xl lg:w-4xl'>
         <div className='flex w-4/6 flex-wrap items-center justify-start p-10'>
           <div>
             <div className='flex w-full text-4xl font-extrabold'>
@@ -47,7 +47,7 @@ export const Home = () => {
           </div>
         </div>
       </div>
-      <div className='flex w-full flex-col pl-10 text-white'>
+      <div className='flex flex-col self-center pl-10 text-white md:w-2xl lg:w-4xl'>
         <div className='mb-2 flex font-bold text-white'>
           <CodeBracketIcon className='mr-2 w-4 text-red-700' />
           Core Skills:
@@ -85,7 +85,7 @@ export const Home = () => {
       </div>
       <div className='mt-10 flex w-full pl-10 text-white'>
         <MagnifyingGlassCircleIcon className='mr-2 w-4 text-red-700' />
-        Currently Looking For Work
+        Open For Work
       </div>
     </section>
   );
