@@ -41,8 +41,11 @@ export const ContactMe = () => {
   return (
     <section
       id='contact'
-      className='flex h-screen w-screen items-center justify-center bg-stone-950'
+      className='flex w-screen flex-wrap items-center justify-center bg-stone-950 pt-20'
     >
+      <div className='w-full text-center text-2xl text-white underline decoration-rose-700 underline-offset-4'>
+        CONTACT ME
+      </div>
       <div className='max-w-l box-border flex flex-wrap items-center justify-center rounded-2xl p-10'>
         <div className='w-full min-w-[200px]'>
           <input
@@ -72,7 +75,8 @@ export const ContactMe = () => {
         </div>
         <a className='mt-4 flex w-full min-w-[200px] items-center justify-center'>
           <button
-            className='cursor-pointer rounded border border-blue-700 bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700'
+            id='submit-button'
+            className='cursor-pointer rounded-lg border px-4 py-2 font-bold text-white'
             onClick={handleSubmit}
           >
             Submit

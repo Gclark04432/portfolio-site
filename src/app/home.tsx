@@ -18,7 +18,7 @@ export const Home = () => {
   return (
     <section
       id='home'
-      className='flex h-screen w-screen flex-col justify-center bg-stone-950'
+      className='flex w-screen flex-col justify-center bg-stone-950 p-10'
     >
       <div className='flex self-center md:w-2xl lg:w-4xl'>
         <div className='flex w-4/6 flex-wrap items-center justify-start p-10'>

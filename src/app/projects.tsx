@@ -9,23 +9,17 @@ const projects: Project[] = [
     technologies: [
       {
         name: 'Typescript',
-        img: '',
         proficiency: Proficiency.EXPERT,
-        border: 'bg-amber-500',
         logo: <JavascriptLogo />,
       },
       {
         name: 'Next.js',
-        img: '',
         proficiency: Proficiency.EXPERT,
-        border: 'bg-amber-500',
         logo: <JavascriptLogo />,
       },
       {
         name: 'React',
-        img: '',
         proficiency: Proficiency.EXPERT,
-        border: 'bg-amber-500',
         logo: <JavascriptLogo />,
       },
     ],
@@ -38,19 +32,29 @@ export const Projects = () => {
   return (
     <section
       id='projects'
-      className='flex h-screen w-screen flex-wrap items-center justify-center bg-gray-800'
+      className='flex w-screen flex-wrap justify-center bg-stone-950 py-20 text-white'
     >
-      <div className='text-l w-full p-8 font-normal text-gray-400'>
-        Projects...
+      <div className='w-full text-center text-2xl text-white underline decoration-rose-700 underline-offset-4'>
+        SOME OF MY WORK
       </div>
-      <div className='text-l w-full p-8 font-bold text-purple-400'>
+      <div className='mt-8 flex justify-center md:w-2xl lg:w-4xl'>
         {projects.map((project) => {
           return (
             <div
               key={project.name}
-              className='m-2 rounded border bg-slate-500 p-8'
+              className='m-2 flex flex-wrap rounded-xl bg-stone-900 p-2 text-white shadow shadow-rose-700'
             >
-              <div>{project.name}</div>
+              <div className='w-full text-center'>{project.name}</div>
+              <div className='flex'>
+                {project.technologies.map((tech) => (
+                  <div key={tech.name}>
+                    <div className={`m-2 flex p-1 text-white`}>
+                      <div className='flex items-center'>{tech.logo}</div>
+                      <div className='ml-1'>{tech.name}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           );
         })}

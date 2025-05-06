@@ -7,14 +7,6 @@
 }
 
 @theme {
-  --animate-rotate-border: rotate-border 3s linear infinite;
-
-  @keyframes rotate-border {
-    to {
-      --border-angle: 360deg;
-    }
-  }
-
   --animate-box-slide: box-slide 10s linear infinite;
   @keyframes box-slide {
     0% {
@@ -40,4 +32,13 @@
       transform: scale(1.05);
     }
   }
+}
+
+html {
+  overflow: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
 }

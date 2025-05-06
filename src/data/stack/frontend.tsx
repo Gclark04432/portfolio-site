@@ -1,11 +1,11 @@
 import {
   JavascriptLogo,
   TypescriptLogo,
-  NextjsLogo,
   ReactLogo,
   HTMLLogo,
   CSSLogo,
   TailwindcssLogo,
+  NextjsWhiteLogo,
 } from '../../../public/logos';
 
 import { Proficiency, StackItem } from '@/types';
@@ -24,7 +24,7 @@ export const frontendStackItems: StackItem[] = [
   {
     name: 'Next.js',
     proficiency: Proficiency.PROFICIENT,
-    logo: <NextjsLogo />,
+    logo: <NextjsWhiteLogo />,
   },
   {
     name: 'React',
