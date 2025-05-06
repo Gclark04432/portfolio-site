@@ -1,7 +1,7 @@
 'use client';
 
 import { Proficiency, Project } from '@/types';
-import { JavascriptLogo } from '../../public/logos';
+import { NextjsWhiteLogo, ReactLogo, TypescriptLogo } from '../../public/logos';
 
 const projects: Project[] = [
   {
@@ -10,21 +10,22 @@ const projects: Project[] = [
       {
         name: 'Typescript',
         proficiency: Proficiency.EXPERT,
-        logo: <JavascriptLogo />,
+        logo: <TypescriptLogo />,
       },
       {
         name: 'Next.js',
         proficiency: Proficiency.EXPERT,
-        logo: <JavascriptLogo />,
+        logo: <NextjsWhiteLogo />,
       },
       {
         name: 'React',
         proficiency: Proficiency.EXPERT,
-        logo: <JavascriptLogo />,
+        logo: <ReactLogo />,
       },
     ],
-    img: '',
-    description: '',
+    img: '/images/portfolio-site.png',
+    description:
+      'A basic portfolio site to display my capabilities to interested parties',
   },
 ];
 
@@ -42,13 +43,15 @@ export const Projects = () => {
           return (
             <div
               key={project.name}
-              className='m-2 flex flex-wrap rounded-xl bg-stone-900 p-2 text-white shadow shadow-rose-700'
+              className={`m-2 flex h-75 flex-wrap rounded-xl bg-[url(/images/portfolio-site.png)] bg-cover bg-center p-2 text-white shadow shadow-rose-700`}
             >
-              <div className='w-full text-center'>{project.name}</div>
-              <div className='flex'>
+              <div className='h-8 w-full rounded-lg bg-stone-900 pt-1 text-center font-bold'>
+                {project.name}
+              </div>
+              <div className='flex w-full justify-center self-end rounded-lg bg-stone-900'>
                 {project.technologies.map((tech) => (
                   <div key={tech.name}>
-                    <div className={`m-2 flex p-1 text-white`}>
+                    <div className={`align-center m-2 flex p-1 text-white`}>
                       <div className='flex items-center'>{tech.logo}</div>
                       <div className='ml-1'>{tech.name}</div>
                     </div>

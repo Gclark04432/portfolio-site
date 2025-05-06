@@ -49,7 +49,7 @@ export const NavBar = () => {
             <div className='flex shrink-0 items-center'>
               <img
                 alt='Gary Clark'
-                src='/profile.png'
+                src='/images/profile.png'
                 className='size-8 h-auto rounded-full'
               />
             </div>

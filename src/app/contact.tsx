@@ -41,7 +41,7 @@ export const ContactMe = () => {
   return (
     <section
       id='contact'
-      className='flex w-screen flex-wrap items-center justify-center bg-stone-950 pt-20'
+      className='flex w-screen flex-wrap items-center justify-center bg-stone-950 py-20'
     >
       <div className='w-full text-center text-2xl text-white underline decoration-rose-700 underline-offset-4'>
         CONTACT ME
