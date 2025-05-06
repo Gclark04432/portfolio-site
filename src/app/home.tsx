@@ -29,7 +29,7 @@ export const Home = () => {
               <div className='text-white'>.</div>
             </div>
             <div className='mt-10 w-full text-xl font-medium text-gray-400'>
-              I'm a software engineer specialising in frontend development and
+              I'm a software engineer specializing in frontend development and
               web design.
             </div>
             <div className='mt-10 flex w-full justify-between'>

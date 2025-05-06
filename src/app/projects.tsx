@@ -43,12 +43,15 @@ export const Projects = () => {
           return (
             <div
               key={project.name}
-              className={`m-2 flex h-75 flex-wrap rounded-xl bg-[url(/images/portfolio-site.png)] bg-cover bg-center p-2 text-white shadow shadow-rose-700`}
+              className={`m-2 flex h-75 max-w-sm flex-wrap rounded-xl bg-[url(/images/portfolio-site.png)] bg-cover bg-center p-2 text-white shadow shadow-rose-700`}
             >
-              <div className='h-8 w-full rounded-lg bg-stone-900 pt-1 text-center font-bold'>
-                {project.name}
+              <div className='w-full self-start rounded-lg pt-1 text-center backdrop-blur-2xl'>
+                <div className='mb-2 w-full font-bold'>{project.name}</div>
+                <div className='flex w-full flex-wrap'>
+                  {project.description}
+                </div>
               </div>
-              <div className='flex w-full justify-center self-end rounded-lg bg-stone-900'>
+              <div className='flex w-full justify-center self-end rounded-lg backdrop-blur-2xl'>
                 {project.technologies.map((tech) => (
                   <div key={tech.name}>
                     <div className={`align-center m-2 flex p-1 text-white`}>
