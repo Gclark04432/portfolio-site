@@ -27,8 +27,8 @@ export const NavBar = () => {
   const [currentNav, setCurrentNav] = useState<NavItem>(navigation[0]);
 
   return (
-    <Disclosure as='nav' className='z-100 w-screen bg-stone-950'>
-      <div className='px-2 sm:px-6 lg:px-8'>
+    <Disclosure as='nav' className='z-100 w-screen'>
+      <div className='fixed top-0 w-full bg-stone-950 px-2 sm:px-6 lg:px-8'>
         <div className='relative flex h-16 items-center justify-between'>
           <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'>
             {/* Mobile menu button*/}

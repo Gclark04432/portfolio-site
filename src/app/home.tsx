@@ -23,17 +23,14 @@ export const Home = () => {
       <div className='flex w-full self-center md:w-2xl lg:w-4xl'>
         <div className='flex w-4/6 flex-wrap items-center justify-start'>
           <div>
-            <div className='absolute flex w-full text-4xl font-extrabold'>
+            <div className='flex w-full text-4xl font-extrabold'>
               <div className='text-white'>Hi! I'm</div>
-              <div className='ml-1 animate-pulse text-rose-700'>Gary</div>
+              <div className='ml-1 text-rose-700'>Gary</div>
               <div className='text-white'>.</div>
             </div>
             <div className='mt-10 w-full text-xl font-medium text-gray-400'>
               I'm a software engineer specializing in frontend development and
               web design.
-            </div>
-            <div className='mt-10 flex w-full justify-between'>
-              <div className='animate-box-slide h-2 w-2 border-1 border-red-900' />
             </div>
           </div>
         </div>

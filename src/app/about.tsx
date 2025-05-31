@@ -22,8 +22,8 @@ export const About = () => {
             {' '}
             I specialize in frontend development, particularly using Next.js,
             React, and Typescript, but I'm also comfortable with various tools
-            and able to adapt to project needs. I also have experience in full
-            stack development. <br />
+            and able to adapt to project needs. I have experience working in a
+            full stack capacity and also in CI/CD flows. <br />
             <br />
             I'm looking for new opportunities where I can merge my love for code
             with my love for learning to solve challenging problems. If you have

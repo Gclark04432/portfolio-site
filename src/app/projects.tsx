@@ -1,7 +1,14 @@
 'use client';
 
 import { Proficiency, Project } from '@/types';
-import { NextjsWhiteLogo, ReactLogo, TypescriptLogo } from '../../public/logos';
+import {
+  CSSLogo,
+  HTMLLogo,
+  JavascriptLogo,
+  NextjsWhiteLogo,
+  ReactLogo,
+  TypescriptLogo,
+} from '../../public/logos';
 
 const projects: Project[] = [
   {
@@ -27,6 +34,29 @@ const projects: Project[] = [
     description:
       'A basic portfolio site to display my capabilities to interested parties',
   },
+  {
+    name: 'Dad Jokes & Dogs',
+    technologies: [
+      {
+        name: 'Javascript',
+        proficiency: Proficiency.EXPERT,
+        logo: <JavascriptLogo />,
+      },
+      {
+        name: 'HTML',
+        proficiency: Proficiency.EXPERT,
+        logo: <HTMLLogo />,
+      },
+      {
+        name: 'CSS',
+        proficiency: Proficiency.EXPERT,
+        logo: <CSSLogo />,
+      },
+    ],
+    img: '/images/dj&d.png',
+    description:
+      'A simple Chrome extension that fetches a random dad joke and dog pic to brighten your day',
+  },
 ];
 
 export const Projects = () => {
@@ -38,12 +68,13 @@ export const Projects = () => {
       <div className='w-full text-center text-2xl text-white underline decoration-rose-700 underline-offset-4'>
         SOME OF MY WORK
       </div>
-      <div className='mt-8 flex justify-center md:w-2xl lg:w-4xl'>
+      <div className='mt-8 flex flex-wrap justify-center md:w-2xl lg:w-4xl'>
         {projects.map((project) => {
           return (
             <div
               key={project.name}
-              className={`m-2 flex h-75 max-w-sm flex-wrap rounded-xl bg-[url(/images/portfolio-site.png)] bg-cover bg-center p-2 text-white shadow shadow-rose-700`}
+              style={{ backgroundImage: `url(${project.img})` }}
+              className={`m-2 flex h-75 max-w-xs flex-wrap rounded-xl bg-cover bg-center p-2 text-white shadow shadow-rose-700`}
             >
               <div className='w-full self-start rounded-lg pt-1 text-center backdrop-blur-2xl'>
                 <div className='mb-2 w-full font-bold'>{project.name}</div>
