@@ -7,6 +7,7 @@ import {
 } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { NavItem } from '@/types';
+import { useScroll, useMotionValueEvent } from 'framer-motion';
 
 const navigation: NavItem[] = [
   { name: 'Home', href: '#home', current: true },
@@ -20,15 +21,33 @@ function classNames(...classes: string[]) {
 }
 
 export const NavBar = () => {
+  const [atTopOfPage, setAtTopOfPage] = useState<boolean>(true);
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, 'change', (latest) => {
+    console.log({ latest });
+    if (latest > 10 && atTopOfPage) {
+      setAtTopOfPage(false);
+    } else if (latest < 10) {
+      setAtTopOfPage(true);
+    }
+  });
+
   const handleNavChange = (newNav: NavItem) => {
     setCurrentNav(newNav);
   };
 
   const [currentNav, setCurrentNav] = useState<NavItem>(navigation[0]);
 
+  const defaultClasses = 'w-full px-2 sm:px-6 lg:px-8';
+
+  const navbarClasses = atTopOfPage
+    ? `${defaultClasses} bg-stone-950`
+    : `${defaultClasses} fixed rounded-full mt-5 w-lg inset-x-0 mx-auto border border-rose-700 grayscale-75 bg-stone-950 hover:grayscale-0`;
+
   return (
     <Disclosure as='nav' className='z-100 w-screen'>
-      <div className='fixed top-0 w-full bg-stone-950 px-2 sm:px-6 lg:px-8'>
+      <div className={navbarClasses}>
         <div className='relative flex h-16 items-center justify-between'>
           <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'>
             {/* Mobile menu button*/}

@@ -6,7 +6,7 @@
   initial-value: 0deg;
 }
 
-@theme {
+/* @theme {
   --animate-box-slide: box-slide 10s linear infinite;
   @keyframes box-slide {
     0% {
@@ -32,7 +32,7 @@
       transform: scale(1.05);
     }
   }
-}
+} */
 
 html {
   overflow: scroll;
