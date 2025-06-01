@@ -8,6 +8,8 @@ import {
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { NavItem } from '@/types';
 import { useScroll, useMotionValueEvent } from 'framer-motion';
+import { useDispatch, useSelector } from 'react-redux';
+import { update } from '@/features/nav/navSlice';
 
 const navigation: NavItem[] = [
   { name: 'Home', href: '#home', current: true },
@@ -25,28 +27,29 @@ export const NavBar = () => {
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
-    console.log({ latest });
-    if (latest > 10 && atTopOfPage) {
+    if (latest > 70 && atTopOfPage) {
       setAtTopOfPage(false);
-    } else if (latest < 10) {
+    } else if (latest < 70) {
       setAtTopOfPage(true);
     }
   });
 
-  const handleNavChange = (newNav: NavItem) => {
-    setCurrentNav(newNav);
-  };
+  const location = useSelector((state: any) => state.location.value);
+  const dispatch = useDispatch();
 
-  const [currentNav, setCurrentNav] = useState<NavItem>(navigation[0]);
+  const handleNavChange = (newNav: NavItem) => {
+    dispatch(update(newNav.name));
+  };
 
   const defaultClasses = 'w-full px-2 sm:px-6 lg:px-8';
 
   const navbarClasses = atTopOfPage
     ? `${defaultClasses} bg-stone-950`
-    : `${defaultClasses} fixed rounded-full mt-5 w-lg inset-x-0 mx-auto border border-rose-700 grayscale-75 bg-stone-950 hover:grayscale-0`;
+    : `${defaultClasses} fixed rounded-full w-lg inset-x-0 mx-auto border border-rose-700 grayscale-75 bg-stone-950 hover:grayscale-0 hidden md:flex`;
 
   return (
-    <Disclosure as='nav' className='z-100 w-screen'>
+    <Disclosure as='nav' className='z-100 w-screen bg-stone-950'>
+      {!atTopOfPage && <div className='h-16'></div>}
       <div className={navbarClasses}>
         <div className='relative flex h-16 items-center justify-between'>
           <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'>
@@ -79,9 +82,9 @@ export const NavBar = () => {
                     key={item.name}
                     href={item.href}
                     onClick={() => handleNavChange(item)}
-                    aria-current={currentNav == item ? 'page' : undefined}
+                    aria-current={location == item.name ? 'page' : undefined}
                     className={classNames(
-                      currentNav == item
+                      location == item.name
                         ? 'text-white underline decoration-rose-700 decoration-2 underline-offset-4'
                         : 'text-gray-300 hover:bg-stone-800 hover:text-white',
                       'rounded-md px-3 py-2 text-sm font-medium',
@@ -104,9 +107,9 @@ export const NavBar = () => {
               as='a'
               href={item.href}
               onClick={() => handleNavChange(item)}
-              aria-current={currentNav == item ? 'page' : undefined}
+              aria-current={location == item.name ? 'page' : undefined}
               className={classNames(
-                currentNav == item
+                location == item.name
                   ? 'bg-gray-900 text-white'
                   : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                 'block rounded-md px-3 py-2 text-base font-medium',
