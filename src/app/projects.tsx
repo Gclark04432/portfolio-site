@@ -20,19 +20,42 @@ const projects: Project[] = [
         logo: <TypescriptLogo />,
       },
       {
+        name: 'React',
+        proficiency: Proficiency.EXPERT,
+        logo: <ReactLogo />,
+      },
+      {
         name: 'Next.js',
         proficiency: Proficiency.EXPERT,
         logo: <NextjsWhiteLogo />,
+      },
+    ],
+    img: '/images/portfolio-site.png',
+    description:
+      'A basic portfolio site to display my capabilities to interested parties',
+  },
+  {
+    name: 'Fantasy Matchup Tracker',
+    technologies: [
+      {
+        name: 'Typescript',
+        proficiency: Proficiency.EXPERT,
+        logo: <TypescriptLogo />,
       },
       {
         name: 'React',
         proficiency: Proficiency.EXPERT,
         logo: <ReactLogo />,
       },
+      {
+        name: 'Next.js',
+        proficiency: Proficiency.EXPERT,
+        logo: <NextjsWhiteLogo />,
+      },
     ],
-    img: '/images/portfolio-site.png',
+    img: '/images/fantasy-matchup-tracker.png',
     description:
-      'A basic portfolio site to display my capabilities to interested parties',
+      'A simple Chrome extension that fetches a random dad joke and dog pic to brighten your day',
   },
   {
     name: 'Dad Jokes & Dogs',
