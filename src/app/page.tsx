@@ -3,7 +3,7 @@
 import { Home } from './home';
 import { About } from './about';
 import { Projects } from './projects';
-import { ContactMe } from './contact';
+import { ContactMe } from './components/ui/contact';
 import { NavBar } from './navbar';
 import { Provider } from 'react-redux';
 import store from './store.js';
