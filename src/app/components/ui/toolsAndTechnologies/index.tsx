@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { CategoryCard } from './CategoryCard';
 import { stackCategories } from '@/data/stack/stackCategories';
-import { TechnicalExpertise } from './TechnicalExpertise';
 
 export const ToolsAndTechnologies = () => {
   return (
@@ -30,8 +29,6 @@ export const ToolsAndTechnologies = () => {
             />
           ))}
         </div>
-
-        <TechnicalExpertise />
       </div>
     </section>
   );

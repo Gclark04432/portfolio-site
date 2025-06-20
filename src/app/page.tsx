@@ -1,7 +1,7 @@
 'use client';
 
-import { Home } from './home';
 import { About } from './components/ui/about';
+import { Home } from './components/ui/home';
 import { Projects } from './components/ui/projects';
 import { ContactMe } from './components/ui/contact';
 import { NavBar } from './navbar';
