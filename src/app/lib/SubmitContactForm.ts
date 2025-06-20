@@ -1,15 +1,16 @@
+import { SubmissionStatus } from '@/types';
 import emailjs from '@emailjs/browser';
 
 export const submitContactForm = async (
   name: string,
   email: string,
   message: string,
-): Promise<{ status: string; error: string }> => {
-  const result = { status: '', error: '' };
+): Promise<SubmissionStatus> => {
+  let result: SubmissionStatus = SubmissionStatus.IDLE;
 
-  const serviceId = process.env.SERVICE_ID as string;
-  const templateId = process.env.TEMPLATE_ID as string;
-  const publicKey = process.env.PUBLIC_KEY as string;
+  const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID as string;
+  const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID as string;
+  const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY as string;
 
   const templateParams = {
     from_name: name,
@@ -18,7 +19,7 @@ export const submitContactForm = async (
   };
 
   try {
-    const { status } = await emailjs.send(
+    const { status, text } = await emailjs.send(
       serviceId,
       templateId,
       templateParams,
@@ -26,14 +27,13 @@ export const submitContactForm = async (
     );
 
     if (status === 200) {
-      result.status = 'success';
+      result = SubmissionStatus.SUCCESS;
     } else {
-      result.status = 'error';
-      result.error = 'Unknown status response received';
+      result = SubmissionStatus.ERROR;
     }
   } catch (error) {
-    result.status = 'error';
-    result.error = (error as Error).message;
+    console.log({ error });
+    result = SubmissionStatus.ERROR;
   }
 
   return result;

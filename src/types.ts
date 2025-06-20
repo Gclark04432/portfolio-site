@@ -25,3 +25,9 @@ export interface Project {
   img: string;
   description: string;
 }
+
+export enum SubmissionStatus {
+  IDLE = 'idle',
+  SUCCESS = 'success',
+  ERROR = 'error',
+}
