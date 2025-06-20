@@ -15,7 +15,12 @@ export const TechnologiesGrid = ({
   return (
     <div className='grid grid-cols-2 gap-3'>
       {gridItems.map((tech, index) => (
-        <ToolOrTech tech={tech} index={index} gradient={gradient} />
+        <ToolOrTech
+          tech={tech}
+          index={index}
+          gradient={gradient}
+          key={tech.name}
+        />
       ))}
     </div>
   );

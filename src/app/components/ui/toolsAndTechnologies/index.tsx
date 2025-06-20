@@ -6,7 +6,7 @@ export const ToolsAndTechnologies = () => {
   return (
     <section
       id='tech-stack'
-      className='flex w-screen flex-col items-center justify-center bg-stone-950 px-4 py-20'
+      className='flex w-screen flex-col items-center justify-center bg-stone-950 px-4 py-24'
     >
       <motion.div
         initial={{ opacity: 0, y: 20 }}

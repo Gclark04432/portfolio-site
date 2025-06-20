@@ -36,7 +36,7 @@ export const About = () => {
   return (
     <section
       id='about'
-      className='flex w-screen flex-col items-center justify-center bg-stone-950 px-4 py-20'
+      className='flex w-screen flex-col items-center justify-center bg-stone-950 px-4 py-24'
     >
       <div className='w-full max-w-7xl'>
         <motion.div
