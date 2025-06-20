@@ -1,5 +1,7 @@
 'use client';
 
+import { getYearsExperience } from './lib/GetYearsExperience';
+
 export const About = () => {
   return (
     <section
@@ -39,7 +41,9 @@ export const About = () => {
             <div className='relative'>
               <div className='flex h-64 w-64 items-center justify-center rounded-2xl border border-rose-500/30 bg-gradient-to-br from-rose-500/20 to-purple-500/20 backdrop-blur-sm'>
                 <div className='text-center'>
-                  <div className='mb-2 text-4xl font-bold text-white'>4+</div>
+                  <div className='mb-2 text-4xl font-bold text-white'>
+                    {getYearsExperience()}+
+                  </div>
                   <div className='text-gray-300'>Years of Experience</div>
                 </div>
               </div>

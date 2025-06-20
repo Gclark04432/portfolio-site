@@ -1,3 +1,4 @@
+import { getYearsExperience } from '@/app/lib/GetYearsExperience';
 import { SparklesIcon } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
 
@@ -21,7 +22,9 @@ export const TechnicalExpertise = () => {
             <div className='text-gray-400'>Technologies</div>
           </div>
           <div className='text-center'>
-            <div className='mb-2 text-3xl font-bold text-rose-400'>4+</div>
+            <div className='mb-2 text-3xl font-bold text-rose-400'>
+              {getYearsExperience()}+
+            </div>
             <div className='text-gray-400'>Years Experience</div>
           </div>
           <div className='text-center'>
