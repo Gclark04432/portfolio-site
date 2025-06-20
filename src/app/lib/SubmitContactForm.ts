@@ -30,10 +30,11 @@ export const submitContactForm = async (
       result = SubmissionStatus.SUCCESS;
     } else {
       result = SubmissionStatus.ERROR;
+      console.error('EmailJS error: ', text);
     }
   } catch (error) {
-    console.log({ error });
     result = SubmissionStatus.ERROR;
+    console.error({ error });
   }
 
   return result;

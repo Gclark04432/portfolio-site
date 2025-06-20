@@ -24,6 +24,8 @@ export interface Project {
   technologies: StackItem[];
   img: string;
   description: string;
+  github: string;
+  demo: string;
 }
 
 export enum SubmissionStatus {
