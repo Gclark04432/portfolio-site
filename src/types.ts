@@ -1,9 +1,28 @@
-import { ReactElement } from 'react';
+import {
+  ForwardRefExoticComponent,
+  ReactElement,
+  RefAttributes,
+  SVGProps,
+} from 'react';
 
 export interface NavItem {
   name: string;
   href: string;
   current: boolean;
+}
+
+export interface StackCategory {
+  title: string;
+  icon: ForwardRefExoticComponent<
+    Omit<SVGProps<SVGSVGElement>, 'ref'> & {
+      title?: string;
+      titleId?: string;
+    } & RefAttributes<SVGSVGElement>
+  >;
+  items: StackItem[];
+  color: string;
+  bgColor: string;
+  borderColor: string;
 }
 
 export interface StackItem {
@@ -16,6 +35,7 @@ export enum Proficiency {
   EXPERT,
   PROFICIENT,
   COMPETENT,
+  ADVANCED_BEGINNER,
   BEGINNER,
 }
 
