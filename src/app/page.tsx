@@ -7,6 +7,7 @@ import { ContactMe } from './components/ui/contact';
 import { NavBar } from './navbar';
 import { Provider } from 'react-redux';
 import store from './store.js';
+import { ToolsAndTechnologies } from './components/ui/toolsAndTechnologies';
 
 export default function Page() {
   return (
@@ -15,6 +16,7 @@ export default function Page() {
         <NavBar />
         <Home />
         <About />
+        <ToolsAndTechnologies />
         <Projects />
         <ContactMe />
       </div>

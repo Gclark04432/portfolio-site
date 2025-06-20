@@ -3,6 +3,7 @@
 import { frontendStackItems } from '@/data/stack/frontend';
 import { backendStackItems } from '@/data/stack/backend';
 import { toolStackItems } from '@/data/stack/tools';
+import { ToolsAndTechnologies } from './components/ui/toolsAndTechnologies';
 
 export const About = () => {
   return (
@@ -29,37 +30,6 @@ export const About = () => {
             with my love for learning to solve challenging problems. If you have
             an opening that might be a good fit, let's connect and explore the
             possibilities!
-          </div>
-        </div>
-      </div>
-
-      <div className='flex w-full justify-center pt-20'>
-        <div className='flex justify-center md:w-2xl lg:w-4xl'>
-          <div className='flex flex-wrap'>
-            <div className='flex w-full justify-between'>
-              <div className='w-full text-center text-2xl text-white underline decoration-rose-700 underline-offset-4'>
-                TOOLS & TECHNOLOGIES
-              </div>
-            </div>
-
-            <div className='flex flex-wrap justify-evenly p-8'>
-              {[
-                ...frontendStackItems,
-                ...backendStackItems,
-                ...toolStackItems,
-              ].map((item) => {
-                return (
-                  <div key={item.name}>
-                    <div
-                      className={`m-2 flex rounded-xl bg-stone-900 p-4 text-white shadow shadow-rose-700`}
-                    >
-                      <div className='flex items-center'>{item.logo}</div>
-                      <div className='ml-1'>{item.name}</div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
           </div>
         </div>
       </div>
