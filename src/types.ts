@@ -53,3 +53,15 @@ export enum SubmissionStatus {
   SUCCESS = 'success',
   ERROR = 'error',
 }
+
+export interface KeyStat {
+  icon: ForwardRefExoticComponent<
+    Omit<SVGProps<SVGSVGElement>, 'ref'> & {
+      title?: string;
+      titleId?: string;
+    } & RefAttributes<SVGSVGElement>
+  >;
+  label: string;
+  value: string;
+  color: string;
+}
