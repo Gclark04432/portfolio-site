@@ -36,7 +36,7 @@ const projects: Project[] = [
     img: '/images/portfolio-site.png',
     description:
       'A modern, responsive portfolio website built with Next.js and React to showcase my work.',
-    github: 'https://github.com/Gclark04432/fantasy-matchup-tracker',
+    github: 'https://github.com/Gclark04432/portfolio-site',
   },
   {
     name: 'Fantasy Matchup Tracker',
@@ -85,7 +85,7 @@ const projects: Project[] = [
     img: '/images/dj&d.png',
     description:
       'A simple Chrome extension that fetches a random dad joke and dog pic to brighten your day with daily doses of humor and cuteness.',
-    github: 'https://github.com/Gclark04432/fantasy-matchup-tracker',
+    github: 'https://github.com/Gclark04432/dad-jokes-and-dogs',
   },
 ];
 
