@@ -1,10 +1,5 @@
 import { Project } from '@/types';
-import {
-  CodeBracketIcon,
-  StarIcon,
-  EyeIcon,
-  ArrowTopRightOnSquareIcon,
-} from '@heroicons/react/24/solid';
+import { EyeIcon, ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid';
 import { motion } from 'framer-motion';
 import { ProjectTechnology } from './ ProjectTechnology';
 
@@ -66,16 +61,18 @@ export const ProjectCard = ({ project, index }: ProjectCardProps) => {
             <span>View Project</span>
           </motion.a>
 
-          <motion.a
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className='flex items-center justify-center space-x-2 rounded-lg border border-stone-700 bg-stone-800 px-4 py-3 font-semibold text-gray-300 transition-all duration-300 hover:border-stone-600 hover:bg-stone-700 hover:text-white'
-            href={project.demo}
-            target='_blank'
-          >
-            <ArrowTopRightOnSquareIcon className='h-4 w-4' />
-            <span>Demo</span>
-          </motion.a>
+          {project.demo && (
+            <motion.a
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className='flex items-center justify-center space-x-2 rounded-lg border border-stone-700 bg-stone-800 px-4 py-3 font-semibold text-gray-300 transition-all duration-300 hover:border-stone-600 hover:bg-stone-700 hover:text-white'
+              href={project.demo}
+              target='_blank'
+            >
+              <ArrowTopRightOnSquareIcon className='h-4 w-4' />
+              <span>Demo</span>
+            </motion.a>
+          )}
         </div>
       </div>
 

@@ -37,7 +37,6 @@ const projects: Project[] = [
     description:
       'A modern, responsive portfolio website built with Next.js and React to showcase my work.',
     github: 'https://github.com/Gclark04432/fantasy-matchup-tracker',
-    demo: 'https://fantasy-matchup-tracker.vercel.app',
   },
   {
     name: 'Fantasy Matchup Tracker',
@@ -87,7 +86,6 @@ const projects: Project[] = [
     description:
       'A simple Chrome extension that fetches a random dad joke and dog pic to brighten your day with daily doses of humor and cuteness.',
     github: 'https://github.com/Gclark04432/fantasy-matchup-tracker',
-    demo: 'https://fantasy-matchup-tracker.vercel.app',
   },
 ];
 

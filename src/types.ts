@@ -45,7 +45,7 @@ export interface Project {
   img: string;
   description: string;
   github: string;
-  demo: string;
+  demo?: string;
 }
 
 export enum SubmissionStatus {
