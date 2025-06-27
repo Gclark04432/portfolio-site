@@ -87,6 +87,19 @@ const projects: Project[] = [
       'A simple Chrome extension that fetches a random dad joke and dog pic to brighten your day with daily doses of humor and cuteness.',
     github: 'https://github.com/Gclark04432/dad-jokes-and-dogs',
   },
+  {
+    name: 'UXRay',
+    technologies: [
+      {
+        name: 'Typescript',
+        proficiency: Proficiency.EXPERT,
+        logo: <TypescriptLogo />,
+      },
+    ],
+    img: '/images/uxray.png',
+    description:
+      'Shine a light on accessibility and UX issues in your React components.',
+  },
 ];
 
 export const Projects = () => {

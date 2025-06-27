@@ -44,7 +44,7 @@ export interface Project {
   technologies: StackItem[];
   img: string;
   description: string;
-  github: string;
+  github?: string;
   demo?: string;
 }
 

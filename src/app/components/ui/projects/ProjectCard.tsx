@@ -50,16 +50,27 @@ export const ProjectCard = ({ project, index }: ProjectCardProps) => {
         </div>
 
         <div className='flex space-x-3'>
-          <motion.a
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className='flex flex-1 items-center justify-center space-x-2 rounded-lg bg-gradient-to-r from-rose-600 to-rose-700 px-4 py-3 font-semibold text-white shadow-lg transition-all duration-300 hover:from-rose-700 hover:to-rose-800 hover:shadow-rose-500/25'
-            href={project.github}
-            target='_blank'
-          >
-            <EyeIcon className='h-4 w-4' />
-            <span>View Project</span>
-          </motion.a>
+          {project.github ? (
+            <motion.a
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className='flex flex-1 items-center justify-center space-x-2 rounded-lg bg-gradient-to-r from-rose-600 to-rose-700 px-4 py-3 font-semibold text-white shadow-lg transition-all duration-300 hover:from-rose-700 hover:to-rose-800 hover:shadow-rose-500/25'
+              href={project.github}
+              target='_blank'
+            >
+              <EyeIcon className='h-4 w-4' />
+              <span>View Project</span>
+            </motion.a>
+          ) : (
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className='flex flex-1 items-center justify-center space-x-2 rounded-lg bg-gradient-to-r from-rose-600 to-rose-700 px-4 py-3 font-semibold text-white shadow-lg transition-all duration-300 hover:from-rose-700 hover:to-rose-800 hover:shadow-rose-500/25'
+            >
+              <EyeIcon className='h-4 w-4' />
+              <span>Coming Soon</span>
+            </motion.div>
+          )}
 
           {project.demo && (
             <motion.a
