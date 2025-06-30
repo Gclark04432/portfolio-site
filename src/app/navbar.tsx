@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
   Disclosure,
   DisclosureButton,
@@ -41,6 +41,41 @@ export const NavBar = () => {
   const handleNavChange = (newNav: NavItem) => {
     dispatch(update(newNav.name));
   };
+
+  // Scroll spy logic
+  useEffect(() => {
+    const sectionIds = [
+      { id: 'home', name: 'Home' },
+      { id: 'about', name: 'About Me' },
+      { id: 'tech-stack', name: 'Projects' }, // We'll fix this below
+      { id: 'projects', name: 'Projects' },
+      { id: 'contact', name: 'Contact Me' },
+    ];
+
+    // Fix: 'Projects' should map to 'projects', 'Tools & Technologies' to 'tech-stack'
+    // But your nav only has Home, About Me, Projects, Contact Me
+    // So skip 'tech-stack' unless you want to add it to the nav
+
+    const handleScroll = () => {
+      let currentSection = 'Home';
+      for (let i = 0; i < sectionIds.length; i++) {
+        const section = document.getElementById(sectionIds[i].id);
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= 80) {
+            currentSection = sectionIds[i].name;
+          }
+        }
+      }
+      if (currentSection !== location) {
+        dispatch(update(currentSection));
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Initial check
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [dispatch, location]);
 
   return (
     <AnimatePresence>
